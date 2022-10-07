@@ -19,5 +19,5 @@ jobs:
       - name: Commit stars.json
         run: |
           git add stars.json
-          git commit -m echo "Update stars.json ($(env TZ='America/Chicago' date -Im))" || echo "No changes to GitHub stars"
+          git commit -m "Update stars.json ($(env TZ='America/Chicago' date -Im))" || echo "No changes to GitHub stars"
           git push origin main
