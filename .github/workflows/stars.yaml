@@ -1,7 +1,7 @@
 name: Get and commit GitHub stars
 on: workflow_dispatch
 jobs:
-  date:
+  stars:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
