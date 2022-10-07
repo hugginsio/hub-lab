@@ -28,7 +28,7 @@ jobs:
         run: |
           if [[ $(git status --porcelain | wc -l) -gt 0 ]]; then
             echo "GitHub stars updated. Pushing changes."
-            git add stars.json
+            git add stars/stars.json
             git commit -m "Update stars.json ($(env TZ='America/Chicago' date -Im))"
             git push origin main
           else
