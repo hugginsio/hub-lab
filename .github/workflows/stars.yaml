@@ -16,8 +16,15 @@ jobs:
       - name: Get GitHub stars
         run: |
           curl https://api.github.com/users/hugginsio/starred -H "Accept: application/json" -s --output stars.json
-      - name: Commit stars.json
+      - name: Commit stars.json if changed
         run: |
-          git add stars.json
-          git commit -m "Update stars.json ($(env TZ='America/Chicago' date -Im))" || echo "No changes to GitHub stars"
-          git push origin main
+          git diff -s --exit-code stars.json
+          
+          if [ $? -eq 1 ]; then
+            echo "GitHub stars updated. Pushing changes."
+            git add stars.json
+            git commit -m "Update stars.json ($(env TZ='America/Chicago' date -Im))"
+            git push origin main
+          else
+            echo "No changes to GitHub stars"
+          fi
