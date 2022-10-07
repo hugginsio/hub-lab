@@ -12,8 +12,6 @@ type GitHubStars []struct {
 	FullName    string `json:"full_name"`
 	HTMLURL     string `json:"html_url"`
 	Description string `json:"description"`
-	URL         string `json:"url"`
-	Homepage    string `json:"homepage"`
 	Archived    bool   `json:"archived"`
 }
 
