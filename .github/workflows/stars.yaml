@@ -1,0 +1,20 @@
+name: Get and commit GitHub stars
+on: push
+jobs:
+  date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get GitHub stars
+        run: curl https://api.github.com/users/hugginsio/starred -H "Accept: application/json" -s --output stars.json
+      - name: Setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+      - name: commit
+        run: |
+          # Stage the file, commit and push
+          git add time.txt
+          git commit -m echo "Update stars.json ($(env TZ='America/Chicago' date -Im))" || echo "No changes to GitHub stars"
+          git push origin master
