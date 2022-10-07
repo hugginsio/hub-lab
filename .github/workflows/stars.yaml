@@ -7,7 +7,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Get GitHub stars
-        run: curl https://api.github.com/users/hugginsio/starred -H "Accept: application/json" -s --output stars.json
+        run: |
+          curl https://api.github.com/users/hugginsio/starred -H "Accept: application/json" -s --output stars.json
       - name: Setup git config
         run: |
           git config user.name "GitHub Actions Bot"
