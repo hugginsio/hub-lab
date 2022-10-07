@@ -24,6 +24,10 @@ jobs:
         run: |
           mkdir -p stars
           curl https://api.github.com/users/hugginsio/starred -H "Accept: application/json" -s --output stars/stars.json
+      - name: Setup go environment
+        uses: actions/setup-go@v3.3.0
+      - name: Remove unnecessary fields from stars.json
+        run: go run stars/trim-stars.json
       - name: Commit stars.json if changed
         run: |
           if [[ $(git status --porcelain | wc -l) -gt 0 ]]; then
