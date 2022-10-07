@@ -1,5 +1,12 @@
 name: Get and commit GitHub stars
-on: workflow_dispatch
+on:
+  schedule:
+    - cron:  '11 * * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/**
 jobs:
   stars:
     runs-on: ubuntu-latest
