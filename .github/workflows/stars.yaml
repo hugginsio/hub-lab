@@ -27,6 +27,5 @@ jobs:
             git push origin main
           else
             echo "No changes to GitHub stars"
+            $(exit 0)
           fi
-          
-          exit 0
