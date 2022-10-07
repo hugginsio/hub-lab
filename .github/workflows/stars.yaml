@@ -28,3 +28,5 @@ jobs:
           else
             echo "No changes to GitHub stars"
           fi
+          
+          exit 0
