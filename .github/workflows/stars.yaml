@@ -28,7 +28,7 @@ jobs:
       - name: Setup go environment
         uses: actions/setup-go@v3.3.0
       - name: Remove unnecessary fields from stars.json
-        run: go run stars/manage-stars.go
+        run: go run stars/update-stars.go
       - name: Commit stars.json if changed
         run: |
           if [[ $(git status --porcelain | wc -l) -gt 0 ]]; then
