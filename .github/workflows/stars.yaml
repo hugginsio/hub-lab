@@ -27,14 +27,14 @@ jobs:
           curl https://api.github.com/users/hugginsio/starred -H "Accept: application/json" -s --output stars/stars.json
       - name: Setup go environment
         uses: actions/setup-go@v3.3.0
-      - name: Remove unnecessary fields from stars.json
+      - name: Create markdown from stars.json
         run: go run stars/update-stars.go
       - name: Commit stars.json if changed
         run: |
           if [[ $(git status --porcelain | wc -l) -gt 0 ]]; then
             echo "GitHub stars updated. Pushing changes."
-            git add stars/stars.json
-            git commit -m "Update stars.json ($(env TZ='America/Chicago' date -Im))"
+            git add stars/stars.md
+            git commit -m "Update stars ($(env TZ='America/Chicago' date -Im))"
             git push origin main
           else
             echo "No changes to GitHub stars"
