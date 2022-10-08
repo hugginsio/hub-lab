@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 )
 
 type GitHubStars []struct {
@@ -12,13 +13,14 @@ type GitHubStars []struct {
 	FullName    string `json:"full_name"`
 	HTMLURL     string `json:"html_url"`
 	Description string `json:"description"`
+	Homepage    string `json:"homepage"`
 	Archived    bool   `json:"archived"`
 }
 
 // Remove unnecessary fields from API output and write back to file
 func main() {
-	filePath := "stars/stars.json"
-	file, readFileError := os.ReadFile(filePath)
+	starsJson := "stars/stars.json"
+	file, readFileError := os.ReadFile(starsJson)
 	check(readFileError)
 
 	starData := GitHubStars{}
@@ -26,13 +28,16 @@ func main() {
 	unmarshalError := json.Unmarshal([]byte(file), &starData)
 	check(unmarshalError)
 
-	json, marshalError := json.MarshalIndent(starData, "", "  ")
-	check(marshalError)
+	markdownContents := []string{"# GitHub stars"}
+	for _, star := range starData {
+		markdownContents = append(markdownContents, fmt.Sprintf("## [%v](%v)\r\n%v", star.FullName, star.HTMLURL, star.Description))
+	}
 
-	writeFileError := os.WriteFile(filePath, json, 0644)
+	writeFileError := os.WriteFile("stars/stars.md", []byte(strings.Join(markdownContents, "\r\n\r\n")), 0644)
 	check(writeFileError)
 
-	fmt.Println("stars.json updated successfully")
+	removeFileError := os.Remove(starsJson)
+	check(removeFileError)
 }
 
 func check(err error) {
