@@ -28,9 +28,9 @@ func main() {
 	unmarshalError := json.Unmarshal([]byte(file), &starData)
 	check(unmarshalError)
 
-	markdownContents := []string{"# GitHub stars"}
+	markdownContents := []string{"## GitHub stars"}
 	for _, star := range starData {
-		markdownContents = append(markdownContents, fmt.Sprintf("## [%v](%v)\r\n%v", star.FullName, star.HTMLURL, star.Description))
+		markdownContents = append(markdownContents, fmt.Sprintf("### [%v](%v)\r\n%v", star.FullName, star.HTMLURL, star.Description))
 	}
 
 	writeFileError := os.WriteFile("stars/stars.md", []byte(strings.Join(markdownContents, "\r\n\r\n")), 0644)
