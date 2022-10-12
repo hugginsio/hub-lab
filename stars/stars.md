@@ -67,7 +67,7 @@ A collection of  enhancements for UnifiOS based devices
 Plugin for using the Dyson Pure Cool fans in homebridge.
 
 ### [Kong/insomnia](https://github.com/Kong/insomnia)
-The open-source, cross-platform API client for GraphQL, REST, and gRPC.
+The open-source, cross-platform API client for GraphQL, REST, WebSockets and gRPC.
 
 ### [BetaHuhn/repo-file-sync-action](https://github.com/BetaHuhn/repo-file-sync-action)
 🔄 GitHub Action to keep files like Action workflows or entire directories in sync between multiple repositories.
