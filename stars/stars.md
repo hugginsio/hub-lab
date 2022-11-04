@@ -1,5 +1,8 @@
 ## GitHub stars
 
+### [tailscale/tailscale](https://github.com/tailscale/tailscale)
+The easiest, most secure way to use WireGuard and 2FA.
+
 ### [osmoscraft/osmosmemo](https://github.com/osmoscraft/osmosmemo)
 Turn GitHub into a bookmark manager
 
@@ -86,6 +89,3 @@ The Next.js Static Site Generator
 
 ### [brianlovin/briOS](https://github.com/brianlovin/briOS)
 My personal website.
-
-### [MattieTK/vercel-dynamic-dns](https://github.com/MattieTK/vercel-dynamic-dns)
-Tiny typescript daemon to update a subdomain managed in Vercel.com with the host's current IP
