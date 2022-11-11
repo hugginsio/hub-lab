@@ -1,5 +1,14 @@
 ## GitHub stars
 
+### [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma)
+A fancy self-hosted monitoring tool
+
+### [awesome-selfhosted/awesome-selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
+A list of Free Software network services and web applications which can be hosted on your own servers
+
+### [vmstan/gravity-sync](https://github.com/vmstan/gravity-sync)
+💫 The easy way to synchronize the DNS configuration of two Pi-hole 5.x instances.
+
 ### [tailscale/tailscale](https://github.com/tailscale/tailscale)
 The easiest, most secure way to use WireGuard and 2FA.
 
@@ -80,12 +89,3 @@ Script Commands let you tailor Raycast to your needs. Think of them as little pr
 
 ### [BetaHuhn/deploy-to-vercel-action](https://github.com/BetaHuhn/deploy-to-vercel-action)
 🎬▲ Deploy your project to Vercel using GitHub Actions. Supports PR previews and GitHub deployments.
-
-### [QueenOfInterns/Test-Driven-Development-Project-BE](https://github.com/QueenOfInterns/Test-Driven-Development-Project-BE)
-Welcome! This is an optional project that you can complete prior to the start of the Summer Internship Program to help you learn our tech stack. Feel free to leave comments with your questions, however please try to complete this on your own!
-
-### [shuding/nextra](https://github.com/shuding/nextra)
-The Next.js Static Site Generator
-
-### [brianlovin/briOS](https://github.com/brianlovin/briOS)
-My personal website.
