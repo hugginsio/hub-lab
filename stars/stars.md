@@ -1,5 +1,8 @@
 ## GitHub stars
 
+### [walkxcode/Dashboard-Icons](https://github.com/walkxcode/Dashboard-Icons)
+❤️ The best icons for your personal dashboard.
+
 ### [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma)
 A fancy self-hosted monitoring tool
 
@@ -86,6 +89,3 @@ The open-source, cross-platform API client for GraphQL, REST, WebSockets and gRP
 
 ### [raycast/script-commands](https://github.com/raycast/script-commands)
 Script Commands let you tailor Raycast to your needs. Think of them as little productivity boosts throughout your day.
-
-### [BetaHuhn/deploy-to-vercel-action](https://github.com/BetaHuhn/deploy-to-vercel-action)
-🎬▲ Deploy your project to Vercel using GitHub Actions. Supports PR previews and GitHub deployments.
