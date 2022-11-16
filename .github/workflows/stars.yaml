@@ -1,7 +1,5 @@
 name: Get and commit GitHub stars
 on:
-  schedule:
-    - cron:  '11 */2 * * *'
   push:
     branches:
       - main
